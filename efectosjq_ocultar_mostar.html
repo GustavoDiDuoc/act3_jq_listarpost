@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //queremos que cuando se pulse escoder se esconda el texto
+            // y cuando se pulse mostar se vuelva a mostrar el texto
+            // $("#hide").click(function(){
+            //     $("p").hide();
+            // });
+            // $("#show").click(function(){
+            //     $("p").show();
+            // });
+
+            // $("button").click(function(){
+            //     $("p").hide(1000);
+            // });
+            // $("button").click(function(){
+            //     $("p").show();
+            // });
+
+            // Toogle permite esconder lo seleccionado de una vez
+                // $("#hide").click(function(){
+                //     $("p").toggle();
+                // });
+                // // Adicionalmente agregue un evento para que solo un parafo se muestre en el evento click
+                // $("#show").click(function(){
+                //     $("#1").show();
+                // });
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <!-- Dentro de los efectos que tiene JQ podemos controlar la velocidad con la cual podemos generar la devolucion
+    lento, rapido o milisegundos
+    $(selector).hide(speed, callback);
+    $(selector).show(speed, callback);
+    $(selector).toogle(speed, callback); -->
+
+    
+    <p>If you click on the "Hide" button, I will disappear.</p>
+    <p>If you click on the "Hide" button, I will disappear.</p>
+    <p id="1">Soy el parafo tres</p>
+
+<button id="hide">Ocultar </button>
+<button id="show">Mostrar</button>
+</body>
+</html>

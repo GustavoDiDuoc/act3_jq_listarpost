@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <!-- existe dos opciones para utilizar la jq es descargar la libreria o bien utilizar una api para utilizar -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $("button").click(function(){
+            //     $("p").hide();
+            // });
+
+            // Este evento hace referencia asi mismo por el this
+            // $("p").click(function(){
+            //     $(this).hide();
+            // });
+
+            // este evento cuando hace doble click se oculta tag p
+            // $("p").dblclick(function(){
+            //     $(this).hide();
+            // });
+
+            // evetnto cuando el mouse pasar sobre la etiqueta
+            // $("#p1").mouseenter(function(){
+            //     alert("mouse ingreso");
+            // });
+
+            // Evento cuando el mouse se retira
+            // $("#p1").mouseleave(function(){
+            //     alert("saliendo");
+            // });
+
+            // Evento cuando el mouse hace click o el btn del mouse baja
+            // $("#p1").mousedown(function(){
+            //     alert("hubo click");
+            // });
+
+            // Evento cuando el mouse hace click o el btn del mouse sube
+            // $("#p1").mouseup(function(){
+            //     alert("Levantando el btn");
+            // });
+
+            // Evento hover realiza ambas funciones de mouse enter y leave
+            // $("#p1").hover(function(){
+            //     alert("pulsaste");
+            // },
+            // function(){
+            //     alert("saliste");
+            // });
+
+
+                //Uso exclusivo para fomularios
+
+            // Evento para resaltar el foco de la seleccion en un formularioy para que el evento funcione debe llamarse a si mismo en este caso al #p1
+            // $("input").focus(function(){
+            //     $(this).css("background-color", "yellow");
+            // });
+
+            // Evento  cuando pierde el foco de la seleccion en un formularioy para que el evento funcione debe llamarse a si mismo en este caso al #p1
+            // $("input").blur(function () {
+            //     $(this).css("background-color", "green");
+            // });
+
+            // Adjuntar varios eventos
+            // $("p").on("click", function(){
+            //     $(this).hide();
+            // });
+
+            //evento on con varios varios eventos
+            // $("p").on({
+            //     mouseenter: function(){
+            //         $(this).css("background-color", "lightgray");
+            //     },
+            //     mouseleave: function(){
+            //         $(this).css("background-color", "lightblue");
+            //     },
+            //     click: function(){
+            //         $(this).css("background-color", "yellow");
+            //     }
+            // });
+
+            //se deb eterminar de ver otros eventos https://www.w3schools.com/jquery/jquery_events.asp
+
+        });
+    </script>
+</head>
+
+<body>
+    <a href="http://jquery.com/">jQuery este es un texto de referencia</a>
+
+    <!-- la sintaxis de jquery es :
+        $(selector).accion();
+        un ejemplo de esto seria.
+        $(this).hide(); --oculta un elemento actual
+        --Cuando son tags o etiquetas clases o id's se debe usar comillas para invocar la accion
+        $("p").hide(); -- oculta todos los elemtos p
+        --para llamar a la clase se usa punto y luego la clase
+        $(".test").hide(); -- oculta la clase llamada test
+        --para llamar al id  se utiliza # almohadilla
+        $("#test").hide(): -- esconde el elmento con id
+
+        
+        el evento 
+        $(document).ready() --nos permite ejecutar una funcion cuando el documento esta completamente cargado
+        
+
+        COn jquery podemos ocultar  y mostrar elementos del html con lo metodos 
+        hide() y show()
+
+    -->
+    <h1>Este el el primer titulo </h1>
+    <button>presionar para desaparecer</button>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, in!</p>
+
+
+    Name: <input type="text" name="fullname"><br>
+    Email: <input type="text" name="email">
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!-- <script>
+ 
+    $( document ).ready(function() {
+        $( "a" ).click(function( event ) {
+            alert( "The link will no longer take you to jquery.com" );
+            event.preventDefault();
+        });
+    });
+ 
+    </script> -->
+</body>
+
+</html>

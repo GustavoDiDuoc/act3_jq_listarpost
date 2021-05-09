@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Listar Posts jquery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let btnCargarDatos = [];
+            
+            $.getJSON('https://jsonplaceholder.typicode.com/posts', function (info) {
+                let elementos = [];
+                $.each(info, function (indice, valor) {
+                    elementos.push(`<tr><td>  ${valor.title}  </td></trid="1">
+                    <tr><td> ${valor.body} </td></tr> `);
+                });
+
+                $("<tbody> <tr id='posts'> ").html(elementos);
+            });
+
+            $.getJSON("https://jsonplaceholder.typicode.com/comments", function (data) {
+                var items = [];
+                $.each(data, function (key, val) {
+                    items.push(`<tr><td id="1"> ${val.id} el es: ${val.email}</td></tr>`);
+                });
+                //         // $("<tr/>", { "scope": "row",
+                //         //     html: items.join("")
+                //         // }).appendTo("tbody");
+                $('tbody').html(items);
+                //     });
+
+            });
+            //-------------------------
+
+
+        });
+       
+        // $(document).ready(function () {
+        //     $.getJSON("https://jsonplaceholder.typicode.com/comments", function (data) {
+        //         var items = [];
+        //         $.each(data, function (key, val) {
+        //             items.push(`<tr><td> ${val.id} el es: ${val.email}</td></tr>`);
+        //         });
+        //         // $("<tr/>", { "scope": "row",
+        //         //     html: items.join("")
+        //         // }).appendTo("tbody");
+        //         $('tbody').html(items);
+        //     });
+
+        // });
+    </script>
+</head>
+
+<body>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody id="respuesta_body">
+            <tr>
+                <td id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+                <td id="4"></td>
+            </tr>
+
+        </tbody>
+        </div>
+        </div>
+
+</body>
+
+</html>
