@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $("button").click(function(){
+            //     $("div").animate({left:'250px'});
+            // });
+
+            // Manejo de varias propiedades de animate
+            // $("button").click(function () {
+            //     $("div").animate({
+            //         left: '250px',
+            //         opacity: '0.5',
+            //         height: '150px',
+            //         width: '150px'
+            //     });
+            // });
+
+            // tambien se puede utilizar valores relativos como + o - 
+            // esto hacee que el codigo crezca en cantidad equivalente a lo mencionado.
+            // $("button").click(function () {
+            //     $("div").animate({
+            //         left: '250px',
+            //         height: '+=150px',
+            //         width: '+=150px'
+            //     });
+            // });
+
+            // Tambien podemos manejar algunos valores a nuestras animaciones como
+            // hide (ocultar), show(mostrar) o toggle (mezcla de ambas)
+
+            // $("button").click(function () {
+            //     $("div").animate({
+            //         height: 'toggle'
+            //     });
+            // });
+
+                //jquery en cola
+            //         Jquery trae de forma predeterminada funciones para animaciones.
+            // esto significa que si generas varias animate() una despues de otra
+            // este crea una cola interna con las llamadas a metodos.
+            // entonces si queremos realizar varias animaciones una tras otra vamos a utilizar 
+            // esta funcionalidad
+
+            // $("button").click(function(){
+            //     let div = $("div");
+            //     div.animate({height :'300px', opacity: '0.4'}, "slow");
+            //     div.animate({width :'300px', opacity: '0.4'}, "slow");
+            //     div.animate({height :'100px', opacity: '0.4'}, "slow");
+            //     div.animate({width :'100px', opacity: '0.4'}, "slow");
+            // });
+
+            //Otra animacion por cola. 
+            $("button").click(function(){
+                let div = $("div");
+                div.animate({left: '200px'},"slow");
+                //extra propiedad.
+                div.animate({width:'200px'},"slow");
+                div.animate({fontSize: '3em'},"slow");
+            });
+
+
+        });
+    </script>
+
+    <style>
+        #estilo {
+            background: #98bf21;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- las animaciones de jquery se utilizan con el metodo animate()
+    estas son creadas con este emtodo
+    la sintaxis es => $(selector).animate({parametros}, velocidad, callback) 
+    
+    animate puede manejar varia propiedades al mismo tiempo 2.-
+    
+    Jquery trae de forma predeterminada funciones para animaciones.
+    esto significa que si generas varias animate() una despues de otra
+    este crea una cola interna con las llamadas a metodos.
+    entonces si queremos realizar varias animaciones una tras otra vamos a utilizar 
+    esta funcionalidad
+
+    Para utilizar propiedades de css en jquery utilizamos la segunda palabra con mayuscula
+    o formato camelCase-->
+
+    <button>Start Animation</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, inventore!</p>
+
+    <div id="estilo""> Holanda</div>
+
+</body>
+
+</html>

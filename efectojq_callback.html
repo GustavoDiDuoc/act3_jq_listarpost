@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  
+  //esta funciona retorna un callback.o llamada a otro elemento.
+    $("button").click(function(){
+      
+      //con callback 
+    //$("p").hide("slow", function(){
+      //alert("The paragraph is now hidden");
+    //});
+
+        //sin callback
+    $("p").hide("slow");
+
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Hide</button>
+
+<p>This is a paragraph with little content.</p>
+
+</body>
+</html>

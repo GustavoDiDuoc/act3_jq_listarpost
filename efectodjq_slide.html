@@ -11,10 +11,18 @@
             // });
 
             // Metodo slide hacia arriba un elemento
-            $("flip").click(function () {
-                $("#panel").slideUp("slow");
-            });
+            // $("#flip").click(function () {
+            //     $("#panel").slideUp("slow");
+            // });
 
+            
+            // Slide toggle alterna los metodos de up y down 
+            // si elemento se deslizo hacia abajo slideToggle lo desliza hacia arriba
+            // e inversa en el caso que aplque realizarlo
+
+            $("#flip").click(function(){
+                $("#panel").slideToggle(1000);
+            });
 
         });
     </script>
@@ -46,6 +54,7 @@
     $(selector).slideDown(speed,callback);
     $(selector).slideUp(speed,callback);
     $(selector).slideToggle(speed,callback);
+
  -->
     <div id="flip">Click to slide up panel</div>
     <div id="panel">Hello world!</div>

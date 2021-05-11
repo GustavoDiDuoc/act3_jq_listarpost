@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+
+    /** la sintaxis de este metodo es:
+     * $(selector).stop(stopAll,goToEnd);
+     * 
+     * el parametro stopAll si hubiese cola de animacion este la elimina
+     * el valor de incio por defecto es falso, y el efecto es true por ende
+     * cuando ejecutes stopAll se detendra en los valores activos
+     * 
+     * El parámetro opcional goToEnd especifica si se completa o no la animación actual inmediatamente.
+     * El valor predeterminado es falso.
+     * */
+  $("#flip").click(function(){
+    $("#panel").slideDown(5000);
+  });
+  $("#stop").click(function(){
+    $("#panel").stop();
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
+</head>
+<body>
+ 
+<button id="stop">Stop sliding</button>
+
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+
+</body>
+</html>
