@@ -4,6 +4,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
+    // cuando se realiza el evento click de devuelve un callback (funcion)
   $("button").click(function(){
     //  para ejecutar esto se debe agregar una accion a otra y es con (punto).metodo(parametros).metodo(parametros)
     $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
@@ -13,10 +14,13 @@ $(document).ready(function(){
 </head>
 <body>
 <!-- Con jq podemos encadenar acciones y metodos
-    esto nos permite poder ejecutar mutliples metodos jquery que son del mismo elemento en una sola declaracion -->
+    esto nos permite poder ejecutar mutliples metodos jquery que son del mismo elemento en una sola declaracion 
+
+    -->
 <p id="p1">jQuery is fun!!</p>
 
 <button>Click me</button>
 
 </body>
 </html>
+ 
