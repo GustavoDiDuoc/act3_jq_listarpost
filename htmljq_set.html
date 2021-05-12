@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Get</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Estamos enviando la informacion mediate metodo set 
+            $("#btn1").click(function () {
+                // alert("Texto enviado al parrafo " + $("#test").text("PARRAFO CAMBIO"));
+                $("#test").text("PARRAFO CAMBIO");
+            });
+            // Enviando informacion el html desde el btn2 y enviamos un alerta
+            $("#btn2").click(function () {
+                // alert("ENVIADO el HTML " + $("#test").html("PARRAFO HTML"));
+                $("#test").html("PARRAFO CAMBIO");
+            });
+            // recuperando el valor del btn 3
+            $("#btn3").click(function () {
+                // alert("EL valor ENVIADO es: " + $("#test2").val("PARRAFO DE PRUEBA"));
+                $("#test2").val("PARRAFO CAMBIO");
+            });
+            // obtener los atributos 
+            $("#btn3").click(function () {
+                alert("Mostrando el atributo: " + $("#atributo").attr("href"))
+            });
+
+
+            //para este metodo tambien existe la devolucion de la llamada para los 
+            // mismos metodos, esto nos llevara a obtener qu ela devolucion que genera 
+            // el callback de la funcion pinte los datos en el id especifico.
+            $("#btn4").click(function () {
+                $("#test3").text(function (i, textoOriginal) {
+                    return "texto viejo : " + textoOriginal + "Nuevo texto 'Hola mundo' El indice : " + ++i;
+                });
+            });
+            $("#btn5").click(function () {
+                $("#test4").html(function (i, textoOriginal) {
+                    return "Html nuevo: " + textoOriginal + " nuevo Html";
+                })
+            });
+
+            // para establecer atributos podemos utilizar el metodo attr() al igual que en el get
+            // con esto podemos cambiar los atributos los cuales se envia la informacion.
+            // $("#btn6").click(function(){
+            //     $("#aw").attr("href", "https://Seritec.cl");
+            // });
+
+            // Otra opcion es establecer varios atributos al mismo tiempo
+            // $("#btn6").click(function () {
+            //     $("#aw").attr({
+            //         "href": "hhtps://seritec.cl",
+            //         "title": "Ahora es Seritec"
+            //     });
+            // });
+            $("btn6").click(function () {
+                $("#aw").attr("href", function (i, valorOriginal) {
+                    return valorOriginal + "/jquery/";
+                });
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>La parte mas importante de jquery es lograr la manipulacion del dom
+            en HTML y es en esta parte donde jquery no spuede facilitar una gran
+            cantidad de metodos relacionados con el DOM para el acceso y la manipulacion
+            de elementos y atributos.
+        </p>
+
+        <p>
+            Que es el dom , es el data object model es el estandar para acceder a nuestro
+            HTML.
+        </p>
+
+        <p>
+            Existen tres metodos para obtener el contenido desde el HTML
+            Estos nos seran utilies para cuando queramos recuperar o
+            Manipular la informacion del DOM.
+
+            text() - Establece o devuelve el contenido de texto de los elementos seleccionados
+            html() - Establece o devuelve el contenido de los elementos seleccionados (incluido el marcado HTML)
+            val() - Establece o devuelve el valor de los campos del formulario.
+        </p>
+    </div>
+
+    <p id="test">Esto es un <b>
+            <=>
+        </b> texto en un parrafo</p>
+
+    <button id="btn1">Muestra texto</button>
+    <button id="btn2">Muestra HMTL</button>
+
+    <p> Nombre: <input type="text" id="test2" value="Gusano">
+        <a id="atributo" href="https://google.cl"> <br><br> Google.cl</a>
+    </p>
+    <button id="btn3">Muestra valor</button>
+
+
+    <p id="test3">This is a <b>bold</b> paragraph.</p>
+    <p id="test4">This is another <b>bold</b> paragraph.</p>
+
+    <button id="btn4">Show Old/New Text</button>
+    <button id="btn5">Show Old/New HTML</button>
+
+    <p id="pw"><a id="aw" href="https://google.cl">Google.cl</a></p>
+
+    <button id="btn6">Atributo 6</button>
+
+
+</body>
+
+</html>

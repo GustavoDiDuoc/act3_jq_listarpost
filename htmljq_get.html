@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Get</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // vamos a recuperar el texto desde el btn1 y vamos a enviar una alerta
+            $("#btn1").click(function(){
+                alert("Recuperando el Texto " + $("#test").text() + $("#test").html());
+            });
+            // recuperamos el html desde el btn2 y enviamos un alerta
+            // $("#btn2").click(function(){
+            //     alert("Recuperando el HTML " + $("#test").html());
+            // });
+            // // recuperando el valor del btn 3
+            // $("#btn3").click(function(){
+            //     alert("EL valor recuperado es: " + $("#test2").val());
+            // });
+            // // obtener los atributos 
+            // $("#btn3").click(function(){
+            //     alert("Mostrando el atributo: " + $("#atributo").attr("href"))
+            // });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>La parte mas importante de jquery es lograr la manipulacion del dom
+            en HTML y es en esta parte donde jquery no spuede facilitar una gran
+            cantidad de metodos relacionados con el DOM para el acceso y la manipulacion
+            de elementos y atributos.
+        </p>
+
+        <p>
+            Que es el dom , es el data object model es el estandar para acceder a nuestro
+            HTML.
+        </p>
+
+        <p>
+            Existen tres metodos para obtener el contenido desde el HTML
+            Estos nos seran utilies para cuando queramos recuperar o
+            Manipular la informacion del DOM.
+
+            text() - Establece o devuelve el contenido de texto de los elementos seleccionados
+            html() - Establece o devuelve el contenido de los elementos seleccionados (incluido el marcado HTML)
+            val() - Establece o devuelve el valor de los campos del formulario.
+        </p>
+    </div>
+
+    <p id="test">Esto es un <b> <=> </b> texto en un parrafo</p>
+
+    <button id="btn1">Muestra texto</button>
+    <button id="btn2">Muestra HMTL</button>
+
+    <p> Nombre: <input type="text" id="test2" value="Gusano">
+    <a id="atributo" href="https://google.cl"> <br><br> Google.cl</a></p>
+    <button id="btn3">Muestra valor</button>
+</body>
+
+</html>
