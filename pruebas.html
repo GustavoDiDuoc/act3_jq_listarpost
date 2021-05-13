@@ -20,40 +20,12 @@
                     elementos.push(`<tr><td>  ${valor.title}  </td></trid="1">
                     <tr><td> ${valor.body} </td></tr> `);
                 });
-
-                $("<tbody> <tr id='posts'> ").html(elementos);
+                $("<tbody>").html(elementos);
             });
-
-            $.getJSON("https://jsonplaceholder.typicode.com/comments", function (data) {
-                var items = [];
-                $.each(data, function (key, val) {
-                    items.push(`<tr><td id="1"> ${val.id} el es: ${val.email}</td></tr>`);
-                });
-                //         // $("<tr/>", { "scope": "row",
-                //         //     html: items.join("")
-                //         // }).appendTo("tbody");
-                $('tbody').html(items);
-                //     });
-
-            });
-            //-------------------------
-
-
+            
         });
        
-        // $(document).ready(function () {
-        //     $.getJSON("https://jsonplaceholder.typicode.com/comments", function (data) {
-        //         var items = [];
-        //         $.each(data, function (key, val) {
-        //             items.push(`<tr><td> ${val.id} el es: ${val.email}</td></tr>`);
-        //         });
-        //         // $("<tr/>", { "scope": "row",
-        //         //     html: items.join("")
-        //         // }).appendTo("tbody");
-        //         $('tbody').html(items);
-        //     });
-
-        // });
+     
     </script>
 </head>
 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Cuando el boton id = btn1 haga click en el callback (devolver)
+            $("#btn1").click(function () {
+                // retorna a la estiqueta p insertando un texto que tiene html
+                $("p").append("<b> Insertando texto</b>");
+            })
+            //cuando el boton 2 = id btn2 haga click, el callback
+            $("#btn2").click(function () {
+                // retorna a la etiqueta ol e insertara lo que se indique en el appended
+                $("ol").append("<li> Insertando listas</li>");
+            });
+            $("#btn3").click(function () {
+                $("p").prepend("<b> Insertando al inicio del texto</b>");
+            });
+            $("#btn4").click(function () {
+                $("ol").prepend("<li> Insertando al inicio de las listas</li>");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <p>En jquery existen 4 metodos que se utilizan para agregar contenido</p>
+    <ul>
+        <li>append() - Inserta contenido al final de los elementos seleccionados</li>
+        <li>prepend() - Inserta contenido al principio de los elementos seleccionados</li>
+        <li>after() - Inserta contenido después de los elementos seleccionados</li>
+        <li>before() - Inserta contenido antes de los elementos seleccionados</li>
+        <!-- $("#selector").click(function(){
+            $("selector").before("<b>Before</b>");
+          });
+        
+          $("#selector").click(function(){
+            $("selector").after("<i>After</i>");
+          }); -->
+    </ul>
+
+    <h1>Desde aqui va el ejemplo</h1>
+
+    <p>Este es un parrafo</p>
+    <p>Este es otro parrafo</p>
+    <ol>
+        <li>lista 1</li>
+        <li>lista 2</li>
+        <li>lista 3</li>
+    </ol>
+
+    <button id="btn1">Isertando al final texto</button>
+    <button id="btn2">Insertando al final de lista</button>
+    <button id="btn3">Insertando al inicio del texto</button>
+    <button id="btn4"> Insertando al inicio de la lista</button>
+
+    <H2>Agregando varios elemento </H2>
+    <div></div>
+    <p id="varios">elementos</p>
+    <button onclick="insertandoTextos()">Insertar los textos</button>
+    <script>
+        function insertandoTextos() {
+            let txt1 = "<p>Texto.</p>"; //creando texto con html
+            let txt2 = $("<p></p>").text("texto."); //creando texto con jquery
+            let txt3 = document.createElement("p"); //crea un atributo de html
+            txt3.innerHTML = "TexTo."; //Crea texto desde el dom
+            $("div").append(txt1, txt2, txt3);
+        }
+        function afterText() {
+            var txt1 = "<b>I </b>";                    // Create element with HTML 
+            var txt2 = $("<i></i>").text("love ");     // Create with jQuery
+            var txt3 = document.createElement("b");    // Create with DOM
+            txt3.innerHTML = "jQuery!";
+            $("img").after(txt1, txt2, txt3);          // Insert new elements after <img>
+        }
+    </script>
+</body>
+
+</html>

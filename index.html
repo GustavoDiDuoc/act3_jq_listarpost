@@ -27,13 +27,13 @@
                 $.getJSON("https://jsonplaceholder.typicode.com/comments", function (data) {
                     var items = [];
                     $.each(data, function (key, val) {
-                        items.push("<li id='" + key + "'>" + val.id + ' ' + val.body + "</li>");
+                        items.push("<li class='list-group-item-primary'>" + val.id + ' '+ val.body + ' ' +"</li></br>");
+                        // item.push(`<li class="list-group-item-primary"> El comentario es : </br> ${val.id}  ${val.email} </li> </br>`)
                     });
-
-                    $("<ul/>", {
-                        "class": "my-new-list",
-                        html: items.join("")
-                    }).appendTo("body");
+                    $('#div2').html(items);
+                    // $("<ul/>", {
+                    //     html: items.join("")
+                    // }).appendTo("body");
                 });
 
             });
@@ -41,20 +41,49 @@
 
         });
     </script>
+
+    <style>
+        #btn {
+            text-align: center;
+        }
+
+        div {
+            float: center;
+            border: 2px solid black;
+        }
+        .container1{
+            float: left;
+            width: 60%;
+        }
+        .container2{
+            float: right;
+            width: 40%;
+            
+        }
+    </style>
 </head>
 
 <body>
     <!--<button type="submit" id="btnCargarDatos"> Cargar Datos</button>-->
-    <button type="submit" class="btn btn-primary " id="btnCargarDatos">Primero</button>
-    <div class="container">
-        <ol id="listado" class="list-group">
+    <section class="container">
+        <div id="btn">
+            <button type="submit" class="btn btn-primary " id="btnCargarDatos">Cargar Datos</button><br><br>
+        </div>
+        <div class="container1" id="div1">
+            <p> </p>
+            <ol id="listado" class="list-group">
 
-        </ol>
-        <ol id="listado-2" class="list-group">
+            </ol>
 
-        </ol>
-    </div>
-    
+        </div>
+        <div class="container2" id="div2">
+            <p></p>
+            <ol id="listado-2" class="list-group">
+
+            </ol>
+        </div>
+    </section>
+
 
 </body>
 
