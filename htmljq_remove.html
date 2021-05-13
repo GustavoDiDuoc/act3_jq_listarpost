@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery remove|</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $("#btn").click(function () {
+
+            //     $("#div1").remove();//elimina todo el elemento
+            //     $("#div1").empty();//Eliminar el interior del elemento
+            // });
+            $("#btn").click(function () {
+
+                $("#div1").remove(".test");//elimina todo el elemento
+                
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="div1">
+        <p class="test">parrafo 1</p>
+        <p class="test">parrafo 2</p>
+    </div>
+    <br>
+    <button id="btn">Eliminar elementos</button>
+
+</body>
+
+</html>
