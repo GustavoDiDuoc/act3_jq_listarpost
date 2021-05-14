@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //   $("div").first().css("background-color", "yellow");
+            //   $("div").last().css("background-color", "yellow");
+            // $("div").eq(1).css("background-color", "yellow");
+            // $("p").filter(".method").css("background-color", "yellow");
+            $("p").not("p.method").css("background-color", "yellow");
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>Welcome to My Homepage</h1>
+
+    <p class="method">Los métodos de filtrado más básicos son first(), last()y eq(), que le permiten seleccionar un
+        elemento específico
+        en función de su posición en un grupo de elementos.
+        Otros métodos de filtrado, como filter()y le not()permiten seleccionar elementos que coinciden o no con ciertos
+        criterios.
+    </p>
+    <p>
+        El first()método devuelve el primer elemento de los elementos especificados.
+    </p>
+    <p>
+        El last()método devuelve el último elemento de los elementos especificados.
+    </p>
+    <p>
+        El eq()método devuelve un elemento con un número de índice específico de los elementos seleccionados
+        se debe dar elk indice que se requiere.
+    </p>
+    <p class="method">
+        El filter()método le permite especificar un criterio. Los elementos que no coinciden con los
+        criterios se eliminan de la selección y se devuelven los que coinciden.
+        debemos ir directo donde queremos realizar el filtro
+    </p>
+    <p class="not-method">
+        El not()método devuelve todos los elementos que no coinciden con los criterios.
+    </p>
+
+    <div style="border: 1px solid black;">
+        <p>A paragraph in a div.</p>
+        <p>Another paragraph in a div.</p>
+    </div>
+    <br>
+
+    <div style="border: 1px solid black;">
+        <p>A paragraph in another div.</p>
+        <p>Another paragraph in another div.</p>
+    </div>
+    <br>
+
+    <div style="border: 1px solid black;">
+        <p>A paragraph in another div.</p>
+        <p>Another paragraph in another div.</p>
+    </div>
+
+</body>
+
+</html>

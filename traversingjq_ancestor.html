@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Traversing ancestros </title>
+    <style>
+        .ancestors * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $("#btn1").click(function () {
+                $("span").parent().css({ "color": "red", "border": "2px solid red" });
+            });
+            $("#btn2").click(function(){
+                $("span").parents().css({ "color": "red", "border": "2px solid red" });
+            });
+            $("#btn3").click(function(){
+                $("span").parentsUntil("div").css({ "color": "red", "border": "2px solid red" });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>En Jquery para lograr manejar el DOM existen propiedades que debemos conocer
+        estas son:
+        parent(), parents(), parentsUntil()
+    </p>
+    <p>parent() devielve un metodo pirnicpal directamente al elemento seleccionado
+        este metodo sol atraviesa un nivel en el dom
+    </p>
+    <p>
+        parents() engloba todos los parentescos que existen incluso el mas lejano.
+    </p>
+    <p>
+        parentsUntil()método devuelve todos los elementos ancestros entre dos argumentos dados.
+    </p>
+    
+    <div class="ancestors">
+        <div style="width: 500px;">div bis abuelo
+            <ul>Etiqueta ul Abuelo
+                <li>Etiqueta li Padre
+                    <span>
+                        span
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div style="width: 500px;">div Abuelo
+            <p>P padre
+                <span>span</span>
+            </p>
+        </div>
+    </div>
+    <button id="btn1">parent()</button>
+    <button id="btn2">parents()</button>
+    <button id="btn3">parentsUntil()</button>
+
+
+
+
+
+</body>
+
+</html>

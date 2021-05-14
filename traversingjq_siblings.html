@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .siblings * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $("h2").siblings().css({ "color": "red", "border": "2px solid red" });
+            // $("h2").next().css({ "color": "red", "border": "2px solid red" });
+            // $("h2").nextAll().css({ "color": "red", "border": "2px solid red" });
+            $("h2").nextUntil("h6").css({ "color": "red", "border": "2px solid red" });
+        });
+    </script>
+</head>
+
+<body class="siblings">
+    <p>Existen varios metodos</p>
+    <ul>
+        <li>siblings()</li>
+        <li> next()</li>
+        <li>nextAll()</li>
+        <li>nextUntil()</li>
+        <li>prev()</li>
+        <li>prevAll()</li>
+        <li>prevUntil()</li>
+    </ul>
+    <p>los sibling() hermanos podemos recorrer de manera lateral a los hermanos</p>
+    <p>el metodo next() devuelve al sigueinte hermano segun la seleccion</p>
+    <p>por consigueinte el metodo nextAll() devuelve todos los elementos hermanos sigueinte</p>
+    <p>El nextUntil()método devuelve todos los elementos hermanos siguientes entre dos argumentos dados.</p>
+    <p>Los métodos prev(), prevAll()y prevUntil()funcionan igual que los métodos anteriores pero
+        con funcionalidad inversa: devuelven elementos hermanos anteriores (recorren hacia atrás
+        los elementos hermanos en el árbol DOM, en lugar de avanzar).</p>
+    <div>div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>Entre el h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+        <h4>4</h4>
+        <h5>5</h5>
+        <h6>entre el h6</h6>
+    </div>
+</body>
+
+</html>
