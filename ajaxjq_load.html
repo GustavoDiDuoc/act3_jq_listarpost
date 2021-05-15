@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery AJAX load()</title>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function{
+                $("#div").load("https://chilealerta.com/api/query", data, function () {
+                    alert("esta cargado el api");
+                });
+            });
+            // $("button").click(function () {
+            //     $("#div1").load("demo_test.txt", function (responseTxt, statusTxt, xhr) {
+            //         if (statusTxt == "success")
+            //             alert("External content loaded successfully!");
+            //         if (statusTxt == "error")
+            //             alert("Error: " + xhr.status + ": " + xhr.statusText);
+            //     });
+            // });
+        });
+    </script>
+
+</head>
+
+<body>
+    <p>El metodo load() de JQuery es un metodo de JQuery es bastante simple
+        y bien poderoso. Nos sirve para cargar los datos de un servidor y
+        coloca los datos devuelto en algun elemento seleccionado <br>
+
+        la sintaxis es: <br>
+        $(selector).load(URL,data,callback);<br>
+        Los parametros:<br>
+        URL especifica lo que se desea cargar (API).<br>
+        Data especifica un conjunto de datos clave y valor de consulta para ser enviado junto con la solicitud.<br>
+        callback es la funcion que se ejecutar despues de load cuando se complete el metodo.<br>
+    </p>
+    <div id="div">este elemento debe cambiar cuando obtenga el dato</div><br>
+    <button id="btn1">pulsar el boton</button>
+
+</body>
+
+</html>

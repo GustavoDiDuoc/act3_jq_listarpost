@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery AJAX Get y Post</title>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                
+                $.get("https://free-nba.p.rapidapi.com/games", function(data, status){
+                    let nba = [];
+                    $.each(info, function(index, value){
+                        nba.push( `<div>datos ${index} y el valor es ${value}</div>`);
+                    });
+                    $("div").html(nba);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <P>
+        GET: solicita datos de un recurso en especifico /n
+        POST: Envia los datos para procesar un recurso especifico
+    </P>
+    <div>
+        <p>prueba de parrafo</p>
+    </div>
+    <br>
+    <button>enviar Datos</button>
+    
+</body>
+</html>
